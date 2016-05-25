@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="jethro"/>
+
+	<remote name="yocto" 		fetch="https://git.yoctoproject.org/git"/>
+		<project remote="yocto" revision="jethro" name="poky" path="sources/poky"/>
+		<project remote="yocto" revision="jethro" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+
+	<remote name="freescale" 	fetch="https://github.com/Freescale"/>
+		<project remote="freescale" revision="jethro" name="fsl-community-bsp-base" path="sources/base">
+			<copyfile dest="README" src="README"/>
+			<copyfile dest="setup-environment" src="setup-environment"/>
+		</project>
+		<project remote="freescale" revision="jethro" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+		<project remote="freescale" revision="jethro" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+		<project remote="freescale" revision="jethro" name="Documentation" path="sources/Documentation"/>	
+
+	<remote name="oe" 			fetch="https://github.com/openembedded"/>
+		<project remote="oe" revision="jethro" name="meta-openembedded" path="sources/meta-openembedded"/>		
+		<project remote="oe" revision="jethro" name="oe-core" path="sources/oe-core"/>
+		<project remote="oe" revision="jethro" name="meta-oe" path="sources/meta-oe"/>
+
+
+	<remote name="toradex"		fetch="http://git.toradex.com"/>
+		<project remote="toradex" revision="V2.6" name="meta-toradex" path="sources/meta-toradex">
+
+	<remote name="qt5"			fetch="http://github.com/meta-qt5"/>
+		<project remote="qt5" revision="jethro" name="meta-qt5" path="sources/meta-qt5"/> 
+
+
+</manifest>
