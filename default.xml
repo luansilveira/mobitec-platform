@@ -6,9 +6,9 @@
 	<remote name="yocto" fetch="https://git.yoctoproject.org/git"/>
 
 	<remote name="freescale" fetch="https://github.com/Freescale"/>
-	<remote name="oe" 			fetch="https://github.com/openembedded"/>
-	<remote name="toradex"		fetch="http://git.toradex.com"/>
-	<remote name="qt5"			fetch="http://github.com/meta-qt5"/>
+	<remote name="oe" fetch="https://github.com/openembedded"/>
+	<remote name="toradex" fetch="http://git.toradex.com"/>
+	<remote name="qt5" fetch="http://github.com/meta-qt5"/>
 
 
 
@@ -28,7 +28,7 @@
 	<project remote="oe" revision="jethro" name="oe-core" path="sources/oe-core"/>
 	<project remote="oe" revision="jethro" name="meta-oe" path="sources/meta-oe"/>
 
-	<project remote="toradex" revision="V2.6" name="meta-toradex" path="sources/meta-toradex">
+	<project remote="toradex" revision="V2.6" name="meta-toradex" path="sources/meta-toradex"/>
 
 	<project remote="qt5" revision="jethro" name="meta-qt5" path="sources/meta-qt5"/> 
 
