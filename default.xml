@@ -3,33 +3,29 @@
 
 	<default sync-j="4" revision="jethro"/>
 
-	<remote name="yocto" fetch="https://git.yoctoproject.org/git"/>
+	<remote name="yocto" 		fetch="https://git.yoctoproject.org/git"/>
+	<remote name="freescale" 	fetch="https://github.com/freescale"/>
+	<remote name="openembedded" 	fetch="https://github.com/openembedded"/>
+	<remote name="toradex" 		fetch="http://git.toradex.com"/>
+	<remote name="qt5" 		fetch="http://github.com/meta-qt5"/>
 
-	<remote name="freescale" fetch="https://github.com/Freescale"/>
-	<remote name="oe" fetch="https://github.com/openembedded"/>
-	<remote name="toradex" fetch="http://git.toradex.com"/>
-	<remote name="qt5" fetch="http://github.com/meta-qt5"/>
+	<project name="poky.git" 		remote="yocto" revision="jethro" path="sources/poky"/>
+	<project name="meta-fsl-arm.git" 	remote="yocto" revision="jethro" path="sources/meta-fsl-arm"/>
 
-
-
-	<project remote="yocto" revision="jethro" name="poky" path="sources/poky"/>
-	<project remote="yocto" revision="jethro" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-
-	<project remote="freescale" revision="jethro" name="fsl-community-bsp-base" path="sources/base">
+	<project name="fsl-community-bsp-base.git" remote="freescale" revision="jethro" path="sources/base">
 		<copyfile dest="README" src="README"/>
 		<copyfile dest="setup-environment" src="setup-environment"/>
 	</project>
 
-	<project remote="freescale" revision="jethro" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-	<project remote="freescale" revision="jethro" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
-	<project remote="freescale" revision="jethro" name="Documentation" path="sources/Documentation"/>	
+	<project name="meta-fsl-arm-extra.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-arm-extra"/>
+	<project name="meta-fsl-demos.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-demos"/>
+	<project name="Documentation.git" 	remote="freescale" revision="jethro" path="sources/Documentation"/>	
 
-	<project remote="oe" revision="jethro" name="meta-openembedded" path="sources/meta-openembedded"/>		
-	<project remote="oe" revision="jethro" name="oe-core" path="sources/oe-core"/>
-	<project remote="oe" revision="jethro" name="meta-oe" path="sources/meta-oe"/>
+	<project name="meta-openembedded.git" 	remote="openembedded" revision="jethro" path="sources/meta-openembedded"/>		
+	<project name="openembedded-core.git" 	remote="openembedded" revision="jethro" path="sources/openembedded-core"/>
 
-	<project remote="toradex" revision="V2.6" name="meta-toradex" path="sources/meta-toradex"/>
+	<project name="meta-toradex.git" 	remote="toradex" revision="V2.6" path="sources/meta-toradex"/>
 
-	<project remote="qt5" revision="jethro" name="meta-qt5" path="sources/meta-qt5"/> 
+	<project name="meta-qt5.git" 		remote="qt5" revision="jethro" path="sources/meta-qt5"/> 
 
 </manifest>
