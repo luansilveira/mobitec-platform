@@ -19,7 +19,7 @@
 
 	<project name="meta-fsl-arm-extra.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-arm-extra"/>
 	<project name="meta-fsl-demos.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-demos"/>
-	<project name="Documentation.git" 	remote="freescale" revision="jethro" path="sources/Documentation"/>	
+	<project name="Documentation.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-docs"/>	
 
 	<project name="meta-openembedded.git" 	remote="openembedded" revision="jethro" path="sources/meta-openembedded"/>		
 	<project name="openembedded-core.git" 	remote="openembedded" revision="jethro" path="sources/openembedded-core"/>
