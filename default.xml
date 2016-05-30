@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-	<default sync-j="4" revision="jethro"/>
+	<!-- Default configuration -->
+	<default sync-j="1" revision="jethro"/>
 
+	<!-- Yocto repository -->
 	<remote name="yocto" 		fetch="https://git.yoctoproject.org/git"/>
+	<!-- Freescale repository -->
 	<remote name="freescale" 	fetch="https://github.com/freescale"/>
+	<!-- OpenEmbedded repository -->
 	<remote name="openembedded" 	fetch="https://github.com/openembedded"/>
+	<!-- Toradex repository -->
 	<remote name="toradex" 		fetch="http://git.toradex.com"/>
+	<!-- Qt repository -->
 	<remote name="qt5" 		fetch="http://github.com/meta-qt5"/>
 
-	<project name="poky.git" 		remote="yocto" revision="jethro" path="sources/poky"/>
-	<project name="meta-fsl-arm.git" 	remote="yocto" revision="jethro" path="sources/meta-fsl-arm"/>
+	<!-- Poky reference distribution -->
+	<project name="poky.git" 		remote="yocto" path="sources/poky"/>
+	
+	<!-- Freescale layer -->
+	<project name="meta-fsl-arm.git" 	remote="yocto" path="sources/meta-fsl-arm"/>
 
-	<project name="fsl-community-bsp-base.git" remote="freescale" revision="jethro" path="sources/base">
-		<copyfile dest="README" src="README"/>
-		<copyfile dest="setup-environment" src="setup-environment"/>
-	</project>
+	<!-- Freescale default build configuration -->
+	<project name="fsl-community-bsp-base.git" remote="freescale" path="sources/base"/>
 
-	<project name="meta-fsl-arm-extra.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-arm-extra"/>
-	<project name="meta-fsl-demos.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-demos"/>
-	<project name="Documentation.git" 	remote="freescale" revision="jethro" path="sources/meta-fsl-docs"/>	
+	<!-- Freescale Extra layer to include hardware support -->
+	<project name="meta-fsl-arm-extra.git" 	remote="freescale" path="sources/meta-fsl-arm-extra"/>
 
-	<project name="meta-openembedded.git" 	remote="openembedded" revision="jethro" path="sources/meta-openembedded"/>		
-	<project name="openembedded-core.git" 	remote="openembedded" revision="jethro" path="sources/openembedded-core"/>
+	<!-- Freescale Demo layer to include reference images -->
+	<project name="meta-fsl-demos.git" 	remote="freescale" path="sources/meta-fsl-demos"/>
 
+	<!-- Freescale Documentation layer -->
+	<project name="Documentation.git" 	remote="freescale" path="sources/meta-fsl-docs"/>	
+
+	<!-- OpenEmbedded layer -->
+	<project name="meta-openembedded.git" 	remote="openembedded" path="sources/meta-openembedded"/>		
+
+	<!-- Toradex Layer to include support for Toradex hardware -->
 	<project name="meta-toradex.git" 	remote="toradex" revision="V2.6" path="sources/meta-toradex"/>
 
-	<project name="meta-qt5.git" 		remote="qt5" revision="jethro" path="sources/meta-qt5"/> 
+	<!-- Qt5 layer to include Qt5 support -->
+	<project name="meta-qt5.git" 		remote="qt5" path="sources/meta-qt5"/> 
 
 </manifest>
